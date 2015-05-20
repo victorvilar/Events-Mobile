@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.victor.events.BuscaEvento"
+    android:background="@drawable/b5">>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Nome do Evento"
+        android:ems="10"
+        android:id="@+id/etNomeEvento"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="58dp"
+        android:layout_toLeftOf="@+id/btnOk"
+        android:layout_toStartOf="@+id/btnOk" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etData"
+        android:hint="Data Inicio"
+        android:onClick="openCalendar"
+        android:layout_below="@+id/etNomeEvento"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnOk"
+        android:layout_toStartOf="@+id/btnOk" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etLocal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Local"
+        android:inputType="none"
+        android:onClick="goMap"
+        android:layout_toStartOf="@+id/btnOk"
+        android:layout_alignRight="@+id/etTema"
+        android:layout_alignEnd="@+id/etTema"
+        android:layout_below="@+id/etDataF" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTema"
+        android:hint="Tema"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:inputType="text"
+        android:layout_toStartOf="@+id/btnOk"
+        android:layout_toLeftOf="@+id/btnOk"
+        android:layout_below="@+id/etLocal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:id="@+id/btnOk"
+        android:background="#CD3333"
+        android:onClick="goMainApp"
+        android:layout_below="@+id/checkBox6"
+        android:layout_alignRight="@+id/checkBox6"
+        android:layout_alignEnd="@+id/checkBox6"
+        android:layout_marginTop="31dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etDataF"
+        android:hint="Data Fim"
+        android:onClick="openCalendar"
+        android:layout_below="@+id/etData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnOk"
+        android:layout_toStartOf="@+id/btnOk" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:checked="false"
+        android:layout_alignBottom="@+id/etNomeEvento"
+        android:layout_alignRight="@+id/btnOk"
+        android:layout_alignEnd="@+id/btnOk" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox2"
+        android:checked="false"
+        android:layout_alignBottom="@+id/etData"
+        android:layout_alignRight="@+id/btnOk"
+        android:layout_alignEnd="@+id/btnOk" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox3"
+        android:checked="false"
+        android:layout_alignBottom="@+id/etDataF"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox5"
+        android:checked="false"
+        android:layout_above="@+id/etTema"
+        android:layout_alignRight="@+id/btnOk"
+        android:layout_alignEnd="@+id/btnOk" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox6"
+        android:checked="false"
+        android:layout_alignBottom="@+id/etTema"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

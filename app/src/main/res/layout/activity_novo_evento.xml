@@ -1,0 +1,145 @@
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.victor.events.NovoEvento"
+    android:background="@drawable/b5">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Nome do Evento"
+        android:ems="10"
+        android:id="@+id/etNomeEvento"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="58dp"
+        android:layout_toLeftOf="@+id/btnOk"
+        android:layout_toStartOf="@+id/btnOk" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etData"
+        android:layout_below="@+id/etNomeEvento"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Data"
+        android:onClick="openCalendar"
+        android:layout_alignRight="@+id/etNomeEvento"
+        android:layout_alignEnd="@+id/etNomeEvento" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/etHora"
+        android:layout_below="@+id/etData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Hora"
+        android:layout_alignRight="@+id/etData"
+        android:layout_alignEnd="@+id/etData" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etLocal"
+        android:layout_below="@+id/etHora"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Local"
+        android:inputType="none"
+        android:onClick="goMap"
+        android:layout_toStartOf="@+id/btnOk"
+        android:layout_alignRight="@+id/etHora"
+        android:layout_alignEnd="@+id/etHora" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radiogroup"
+        android:layout_below="@+id/etLocal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/etTema"
+        android:layout_alignEnd="@+id/etTema">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Público"
+            android:id="@+id/rbtnPublico"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privado"
+            android:id="@+id/rbtnPrivado"
+            android:layout_gravity="right"
+            android:checked="false" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTema"
+        android:hint="Tema"
+        android:layout_below="@+id/radiogroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:inputType="text"
+        android:layout_toStartOf="@+id/btnOk"
+        android:layout_toLeftOf="@+id/btnOk" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/etDescricao"
+        android:hint="Descrição"
+        android:layout_below="@+id/etTema"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btnOk"
+        android:layout_toLeftOf="@+id/btnOk" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:id="@+id/btnOk"
+        android:layout_alignTop="@+id/etDescricao"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#CD3333"
+        android:onClick="goMainApp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etConvidar"
+        android:layout_below="@+id/etDescricao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Convidar Amigos"
+        android:onClick="goConvidar"
+        android:layout_toStartOf="@+id/btnOk"
+        android:layout_toLeftOf="@+id/btnOk" />
+
+    </RelativeLayout>
+</ScrollView>

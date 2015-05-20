@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.victor.events" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Cadastro"
+            android:label="@string/title_activity_cadastro" >
+        </activity>
+        <activity
+            android:name=".MainApp"
+            android:label="@string/title_activity_main_app" >
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".NovoEvento"
+            android:label="@string/title_activity_novo_evento" >
+        </activity>
+        <activity
+            android:name=".MeusEventos"
+            android:label="@string/title_activity_meus_eventos" >
+        </activity>
+        <activity
+            android:name=".Feedbacks"
+            android:label="@string/title_activity_feedbacks" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".goMaps"
+            android:label="@string/title_activity_go_maps" >
+        </activity>
+        <activity
+            android:name=".ConvidarAmigos"
+            android:label="@string/title_activity_convidar_amigos" >
+        </activity>
+        <activity
+            android:name=".Sobre"
+            android:label="@string/title_activity_sobre" >
+        </activity>
+        <activity
+            android:name=".ConvideAmigo"
+            android:label="@string/title_activity_convide_amigo" >
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile" >
+        </activity>
+        <activity
+            android:name=".ConfigBotao"
+            android:label="@string/title_activity_config_botao" >
+        </activity>
+        <activity
+            android:name=".Ajuda"
+            android:label="@string/title_activity_ajuda" >
+        </activity>
+        <activity
+            android:name=".DetalhesEvento"
+            android:label="@string/title_activity_detalhes_evento" >
+        </activity>
+        <activity
+            android:name=".MeusEventosMeus"
+            android:label="@string/title_activity_meus_eventos_meus" >
+        </activity>
+        <activity
+            android:name=".BuscaEvento"
+            android:label="@string/title_activity_busca_evento" >
+        </activity>
+    </application>
+
+</manifest>
